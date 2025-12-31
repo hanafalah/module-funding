@@ -7,16 +7,26 @@ use Hanafalah\ModuleFunding\{
 };
 
 return [
-    'contracts' => [
-        'funding'        => Contracts\Funding::class,
-        'module_funding' => Contracts\ModuleFunding::class,
+    'namespace' => 'Hanafalah\ModuleFunding',
+    'app' => [
+        'contracts' => [
+            //ADD YOUR CONTRACTS HERE
+        ]
+    ],
+    'libs' => [
+        'model' => 'Models',
+        'contract' => 'Contracts',
+        'schema' => 'Schemas',
+        'database' => 'Database',
+        'data' => 'Data',
+        'resource' => 'Resources',
+        'migration' => '../assets/database/migrations'
     ],
     'commands'  => [
         ModuleFundingCommands\InstallMakeCommand::class
     ],
     'database' => [
         'models' => [
-            'Funding' => ModuleFundingModels\Funding\Funding::class
         ]
     ]
 ];
